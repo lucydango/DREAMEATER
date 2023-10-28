@@ -23,11 +23,11 @@ texture = ExtResource("3_q5621")
 layout_mode = 0
 offset_left = 90.0
 offset_top = 95.0
-offset_right = 707.0
+offset_right = 693.0
 offset_bottom = 548.0
 text = "You feel your very Self unwind as you take a mortal blow.
 
-Parts of you fall away as you descend into an Endless void.
+Parts of you fall away as you descend into an endless void. Some of them never to return.
 
 Until..."
 horizontal_alignment = 1

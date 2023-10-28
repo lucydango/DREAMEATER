@@ -10,7 +10,7 @@ extends Node
 # [item_id] +/-
 # e.g POTION +
 
-@export_global_file("*.png") var frame
+@export var frame: Texture2D
 
 # Min MAX_HP to encounter event
 @export var prerequisite: int

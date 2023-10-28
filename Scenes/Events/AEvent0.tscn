@@ -1,10 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://wdirr5hei8e3"]
+[gd_scene load_steps=3 format=3 uid="uid://wdirr5hei8e3"]
 
 [ext_resource type="Script" path="res://scripts/Events/Event.gd" id="1_0bv1y"]
+[ext_resource type="Texture2D" uid="uid://dsroga43q2v4b" path="res://Sprites/HUD/frames/frameempty.png" id="2_d3ufn"]
 
 [node name="Event" type="Node"]
 script = ExtResource("1_0bv1y")
-frame = "res://Sprites/HUD/frames/frameempty.png"
+frame = ExtResource("2_d3ufn")
 prerequisite = 999
 intro_text = "You have been wandering this labyrinth for what feels like an eternity.
 

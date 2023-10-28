@@ -1,0 +1,50 @@
+[gd_scene load_steps=4 format=3 uid="uid://cmvcqg5n1glc3"]
+
+[ext_resource type="Theme" uid="uid://dvt7s00aejcpi" path="res://Resources/HUD/maintheme.tres" id="1_iuwhf"]
+[ext_resource type="Script" path="res://scripts/TutorialBox.gd" id="2_xgye3"]
+[ext_resource type="Texture2D" uid="uid://dbm1sl7j4pujf" path="res://Sprites/HUD/longpanel.png" id="3_k0l7y"]
+
+[node name="TutorialHUD" type="Control"]
+z_index = 5
+z_as_relative = false
+layout_mode = 3
+anchors_preset = 0
+theme = ExtResource("1_iuwhf")
+script = ExtResource("2_xgye3")
+
+[node name="MainBox" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 2.0
+offset_right = 788.0
+offset_bottom = 648.0
+texture = ExtResource("3_k0l7y")
+
+[node name="EventText" type="Label" parent="MainBox"]
+layout_mode = 0
+offset_left = 87.0
+offset_top = 64.0
+offset_right = 694.0
+offset_bottom = 476.0
+text = "COMBAT TUTORIAL
+
+Attack to reduce the nightmare's health at the cost of stamina. Strong attacks cost more stamina but do more damage.
+
+Recover to earn back stamina you have lost.
+
+If your HP is reduced to 0, you will perish.
+
+Each turn you survive, you will earn 1 EXP. For every 10 EXP you earn, a random stat will be increased. Therefore, try to survive as long as you can, even if all seems lost."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Button" type="Button" parent="MainBox"]
+layout_mode = 0
+offset_left = 332.0
+offset_top = 452.0
+offset_right = 436.0
+offset_bottom = 498.0
+text = "OK"
+
+[connection signal="pressed" from="MainBox/Button" to="." method="_on_button_pressed"]

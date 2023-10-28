@@ -13,11 +13,15 @@ config_version=5
 config/name="Dreameater"
 run/main_scene="res://Scenes/persistent_hud.tscn"
 config/features=PackedStringArray("4.1", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="res://Sprites/HUD/frames/icon.png"
+
+[display]
+
+window/stretch/mode="viewport"
 
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
-environment/defaults/default_clear_color=Color(0, 0, 0.0392157, 1)
+environment/defaults/default_clear_color=Color(0, 0, 0, 1)

@@ -1,10 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://dbh2xysiwtq2d"]
+[gd_scene load_steps=3 format=3 uid="uid://dbh2xysiwtq2d"]
 
 [ext_resource type="Script" path="res://scripts/Events/Event.gd" id="1_8lcu4"]
+[ext_resource type="Texture2D" uid="uid://bcrf02i58il22" path="res://Sprites/HUD/frames/frameflesh.png" id="2_teo41"]
 
 [node name="Event" type="Node"]
 script = ExtResource("1_8lcu4")
-frame = "res://Sprites/HUD/frames/frameflesh.png"
+frame = ExtResource("2_teo41")
 prerequisite = 10
 intro_text = "A large chunk of wall is missing here. In it's place, a writhing mass of tendrils.
 

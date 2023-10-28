@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://b3vcpu7msi8xf"]
+
+[ext_resource type="Script" path="res://scripts/Events/Event.gd" id="1_wd0aj"]
+[ext_resource type="Texture2D" uid="uid://chikcuxou14ut" path="res://Sprites/HUD/frames/framemaggot.png" id="2_trrpr"]
+
+[node name="Event" type="Node"]
+script = ExtResource("1_wd0aj")
+frame = ExtResource("2_trrpr")
+prerequisite = 5
+intro_text = "Ahead of you lies a small, strange creature, resembling a maggot, and writhing on the floor. 
+
+It takes notice of you as you approach, much as you take notice of it's fangs."
+resolution_one_button_text = "Tear off a piece of
+your own flesh and
+use it as bait."
+resolution_two_button_text = "Kill it."
+resolution_one_text = "It comes unnervingly naturally to you to give away a piece of yourself.
+
+You sneak by as it feasts on a piece of your arm."
+resolution_one_end_text = "A necessary
+sacrifice.
+[-1 MAX HP, +1 END]
+"
+resolution_one_resolve_consequences = Array[String](["max_hp - 1", "end + 1"])
+resolution_two_text = "It falls to you easily, ripping in two almost at your command.
+
+In it's belly you find a partially digested scrap of cloth."
+resolution_two_end_text = "Perhaps it will
+be useful.
+[-1 STAM, +1 CLOTH]"
+resolution_two_resolve_consequences = Array[String](["stam - 1", "CLOTH +"])

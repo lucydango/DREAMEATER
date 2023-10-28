@@ -1,10 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://b5rqdyq0onl6o"]
+[gd_scene load_steps=3 format=3 uid="uid://b5rqdyq0onl6o"]
 
 [ext_resource type="Script" path="res://scripts/Events/Event.gd" id="1_u2dlt"]
+[ext_resource type="Texture2D" uid="uid://b546p40s7ayrf" path="res://Sprites/HUD/frames/framephotos.png" id="2_ehjos"]
 
 [node name="Event" type="Node"]
 script = ExtResource("1_u2dlt")
-frame = "res://Sprites/HUD/frames/framephotos.png"
+frame = ExtResource("2_ehjos")
 prerequisite = 15
 intro_text = "The wall of this corridor is lined with what looks like polaroid photos."
 resolution_one_button_text = "Take a closer look."

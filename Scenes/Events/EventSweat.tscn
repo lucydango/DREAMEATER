@@ -1,10 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://dbhoc2dfyqegl"]
+[gd_scene load_steps=3 format=3 uid="uid://dbhoc2dfyqegl"]
 
 [ext_resource type="Script" path="res://scripts/Events/Event.gd" id="1_oumda"]
+[ext_resource type="Texture2D" uid="uid://v6jqyol5mvq1" path="res://Sprites/HUD/frames/framesweat.png" id="2_oahko"]
 
 [node name="Event" type="Node"]
 script = ExtResource("1_oumda")
-frame = "res://Sprites/HUD/frames/framesweat.png"
+frame = ExtResource("2_oahko")
 intro_text = "Something is very wrong with the walls and floor here. It seems to be... Sweating?
 
 A brown liquid oozes out of the tunnel ahead."

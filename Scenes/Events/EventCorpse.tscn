@@ -1,10 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://x4j0qmwr7msm"]
+[gd_scene load_steps=3 format=3 uid="uid://x4j0qmwr7msm"]
 
 [ext_resource type="Script" path="res://scripts/Events/Event.gd" id="1_0wbms"]
+[ext_resource type="Texture2D" uid="uid://cwbmgjonpev26" path="res://Sprites/HUD/frames/framedoor.png" id="2_oft2k"]
 
 [node name="Event" type="Node"]
 script = ExtResource("1_0wbms")
-frame = "res://Sprites/HUD/frames/framedoor.png"
+frame = ExtResource("2_oft2k")
 prerequisite = 10
 intro_text = "The tunnel here is lined with... Corpses?
 
@@ -20,7 +21,7 @@ resolution_one_text = "Some of the corpses still seem to be wearing clothes.
 
 You take a look in their pockets and find what seems to be some strange scroll, written in a script you do not know or understand."
 resolution_one_end_text = "Could you use it?
-[+1 STAM SCROLL]"
+[+1 SCROLL]"
 resolution_one_resolve_consequences = Array[String](["STAM_SCROLL +"])
 resolution_two_text = "Although you're not sure if these bodies ever belonged to real people, you feel a strange kinship to them.
 

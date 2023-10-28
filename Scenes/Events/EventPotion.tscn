@@ -1,10 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://bisfetr5cryjg"]
+[gd_scene load_steps=3 format=3 uid="uid://bisfetr5cryjg"]
 
 [ext_resource type="Script" path="res://scripts/Events/Event.gd" id="1_wqx46"]
+[ext_resource type="Texture2D" uid="uid://pwdvinsbdytf" path="res://Sprites/HUD/frames/framepotion.png" id="2_573j0"]
 
 [node name="Event" type="Node"]
 script = ExtResource("1_wqx46")
-frame = "res://Sprites/HUD/frames/framepotion.png"
+frame = ExtResource("2_573j0")
 intro_text = "The hallway here is strewn with strange flasks dangling from chains. They are filled with some mysterious liquid."
 resolution_one_button_text = "Snatch one and
 stash it for later."

@@ -1,10 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://c42vp0bodo2w5"]
+[gd_scene load_steps=3 format=3 uid="uid://c42vp0bodo2w5"]
 
 [ext_resource type="Script" path="res://scripts/Events/Event.gd" id="1_hy5lb"]
+[ext_resource type="Texture2D" uid="uid://dsroga43q2v4b" path="res://Sprites/HUD/frames/frameempty.png" id="2_iqthu"]
 
 [node name="Event" type="Node"]
 script = ExtResource("1_hy5lb")
-frame = "res://Sprites/HUD/frames/frameempty.png"
+frame = ExtResource("2_iqthu")
 intro_text = "For once, you find yourself walking down an extended stretch of empty hallway."
 resolution_one_button_text = "Steel yourself."
 resolution_two_button_text = "Rest for a moment."

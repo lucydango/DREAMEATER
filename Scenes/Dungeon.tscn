@@ -1,16 +1,29 @@
-[gd_scene load_steps=6 format=3 uid="uid://dqcao1arx4bwe"]
+[gd_scene load_steps=18 format=3 uid="uid://dqcao1arx4bwe"]
 
 [ext_resource type="Theme" uid="uid://dvt7s00aejcpi" path="res://Resources/HUD/maintheme.tres" id="1_rfobi"]
 [ext_resource type="Script" path="res://Scenes/Dungeon.gd" id="2_s1krc"]
 [ext_resource type="Texture2D" uid="uid://dbm1sl7j4pujf" path="res://Sprites/HUD/longpanel.png" id="3_3h3tq"]
+[ext_resource type="PackedScene" uid="uid://b63sseyg3bm7w" path="res://Scenes/Events/Event1.tscn" id="3_gwgk7"]
+[ext_resource type="PackedScene" uid="uid://dt6h5ke25oyxa" path="res://Scenes/Events/Event2.tscn" id="4_4qmcb"]
 [ext_resource type="Texture2D" uid="uid://dsroga43q2v4b" path="res://Sprites/HUD/frames/frameempty.png" id="4_pp7sp"]
 [ext_resource type="PackedScene" uid="uid://dccb7cyqvwi5f" path="res://Scenes/Intermission.tscn" id="5_hj8li"]
+[ext_resource type="PackedScene" uid="uid://c42vp0bodo2w5" path="res://Scenes/Events/Event3.tscn" id="5_ihoqo"]
+[ext_resource type="PackedScene" uid="uid://x4j0qmwr7msm" path="res://Scenes/Events/EventCorpse.tscn" id="6_mj26a"]
+[ext_resource type="PackedScene" uid="uid://dbh2xysiwtq2d" path="res://Scenes/Events/EventFlesh.tscn" id="7_q7j3o"]
+[ext_resource type="PackedScene" uid="uid://b5rqdyq0onl6o" path="res://Scenes/Events/EventPhoto.tscn" id="8_koyy0"]
+[ext_resource type="PackedScene" uid="uid://bisfetr5cryjg" path="res://Scenes/Events/EventPotion.tscn" id="9_ad5hq"]
+[ext_resource type="PackedScene" uid="uid://dbhoc2dfyqegl" path="res://Scenes/Events/EventSweat.tscn" id="10_5c3ym"]
+[ext_resource type="PackedScene" uid="uid://wdirr5hei8e3" path="res://Scenes/Events/AEvent0.tscn" id="11_1waws"]
+[ext_resource type="PackedScene" uid="uid://cbsbj0h8e10bj" path="res://Scenes/Events/EventTendril.tscn" id="12_r2v22"]
+[ext_resource type="PackedScene" uid="uid://dj3udsubib7j2" path="res://Scenes/Events/EventCorpseHP.tscn" id="13_tw7j3"]
+[ext_resource type="PackedScene" uid="uid://b3vcpu7msi8xf" path="res://Scenes/Events/EventMaggot.tscn" id="14_530xw"]
 
 [node name="DungeonHUD" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 theme = ExtResource("1_rfobi")
 script = ExtResource("2_s1krc")
+events_preload = Array[PackedScene]([ExtResource("3_gwgk7"), ExtResource("4_4qmcb"), ExtResource("5_ihoqo"), ExtResource("6_mj26a"), ExtResource("7_q7j3o"), ExtResource("8_koyy0"), ExtResource("12_r2v22"), ExtResource("9_ad5hq"), ExtResource("10_5c3ym"), ExtResource("13_tw7j3"), ExtResource("14_530xw"), ExtResource("11_1waws")])
 
 [node name="MainBox" type="TextureRect" parent="."]
 layout_mode = 0

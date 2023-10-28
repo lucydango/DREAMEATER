@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://cbsbj0h8e10bj"]
+
+[ext_resource type="Script" path="res://scripts/Events/Event.gd" id="1_kg8np"]
+[ext_resource type="Texture2D" uid="uid://btlvroyrxks2v" path="res://Sprites/HUD/frames/frametendril.png" id="2_xv45f"]
+
+[node name="Event" type="Node"]
+script = ExtResource("1_kg8np")
+frame = ExtResource("2_xv45f")
+prerequisite = 10
+intro_text = "The tunnel ahead is blocked by tendrils, paired together as if to form crude, two-fingered hands."
+resolution_one_button_text = "Carve a path through, 
+with violence."
+resolution_two_button_text = "Attempt to run
+before any can 
+get a hold of you."
+resolution_one_text = "The tendrils are thick and hard to pierce, but you are able to slowly maneuvre around the edge of the room.
+
+However, you do not escape unscathed."
+resolution_one_end_text = "Well worth it
+for the catharsis.
+[-5HP, +3STR]"
+resolution_one_resolve_consequences = Array[String](["hp - 5", "str + 3"])
+resolution_two_text = "You dash as fast as you can, weaving between each set of tendrils deftly. 
+
+You escape unscathed, but exhausted."
+resolution_two_end_text = "Better tired than dead.
+[STAM -4; END +2]"
+resolution_two_resolve_consequences = Array[String](["stam -4", "end +2"])

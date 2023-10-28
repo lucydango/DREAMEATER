@@ -90,8 +90,9 @@ func _process(delta):
 			i.disabled = true
 		time_until -= delta
 		if time_until < 0:
-			var audio = get_node("AttackPlayer")
-			audio.playing = true
+			if action == combat_actions.ATTACK ||  action == combat_actions.STRONG_ATTACK:
+				var audio = get_node("AttackPlayer")
+				audio.playing = true
 	else:
 		for i in action_container.get_children():
 			i.disabled = false
@@ -106,8 +107,10 @@ func _on_attack_pressed():
 
 
 func _on_recover_pressed():
-	if (root.stam) <= root.max_stam:
+	if root.stam < root.max_stam:
 		root.stam += root.end
+		get_node("RecoverPlayer").playing = true
+		time_until = 0.5
 		if root.stam > root.max_stam:
 			root.stam = root.max_stam
 		action = combat_actions.RECOVER

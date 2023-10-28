@@ -1,11 +1,13 @@
 extends Control
 
 #Items and IDs
-enum item_ids { POTION, KNIFE, STAM_SCROLL }
-var items = { item_ids.POTION : ["POTION: +4HP", "hp + 4"], item_ids.KNIFE: ["KNIFE: +2STR", "str + 2"], item_ids.STAM_SCROLL: ["SCROLL: +?STAM", "stam + 20"]}
+enum item_ids { POTION, KNIFE, STAM_SCROLL, HP_SCROLL, CLOTH}
+var items = { item_ids.POTION : ["POTION: +4HP", "hp + 4"], item_ids.KNIFE: ["KNIFE: +2STR", "str + 2"], 
+	item_ids.STAM_SCROLL: ["SCROLL: +?STAM", "stam + 20"], item_ids.HP_SCROLL: ["SCROLL: +?HP", "hp + 20"], 
+	item_ids.CLOTH: ["CLOTH: +1 MAXHP", "max_hp + 1"]}
 
 # Inventory
-var inventory = [item_ids.STAM_SCROLL]
+var inventory = []
 
 # Player Stats
 @export var hp: int = 5
@@ -31,6 +33,8 @@ var inventory = [item_ids.STAM_SCROLL]
 # Misc.
 var update_hud_time = 0.1
 var runs = 0
+var tutorial_read = false
+
 func _ready():
 	update_hud()
 

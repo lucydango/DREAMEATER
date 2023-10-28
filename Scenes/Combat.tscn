@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://cjmg3wv3pxl0k"]
+[gd_scene load_steps=18 format=3 uid="uid://cjmg3wv3pxl0k"]
 
 [ext_resource type="Theme" uid="uid://dvt7s00aejcpi" path="res://Resources/HUD/maintheme.tres" id="1_gy5oo"]
 [ext_resource type="Script" path="res://scripts/Combat/Combat.gd" id="2_15vv0"]
@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://dhbpcqptfs6m1" path="res://Sprites/HUD/nightmare.png" id="4_we1u3"]
 [ext_resource type="AudioStream" uid="uid://e1vcuyvdr2ni" path="res://Sounds/attack.wav" id="5_shy7w"]
 [ext_resource type="Texture2D" uid="uid://cpjppk83ao5ee" path="res://Sprites/flash.png" id="6_blkcw"]
+[ext_resource type="AudioStream" uid="uid://bxjlima7a66v8" path="res://Sounds/recover.wav" id="6_ykgnu"]
+[ext_resource type="PackedScene" uid="uid://cmvcqg5n1glc3" path="res://Scenes/TutorialBox.tscn" id="7_7li57"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7m4fd"]
 atlas = ExtResource("6_blkcw")
@@ -145,10 +147,20 @@ text = "RECOVER
 [node name="AttackPlayer" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_shy7w")
 
+[node name="RecoverPlayer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_ykgnu")
+pitch_scale = 0.93
+
 [node name="AttackAnim" type="AnimatedSprite2D" parent="."]
 position = Vector2(265, 215)
 scale = Vector2(4.15625, 2.4375)
 sprite_frames = SubResource("SpriteFrames_7krl3")
+
+[node name="TutorialHUD" parent="." instance=ExtResource("7_7li57")]
+offset_left = 248.0
+offset_top = 34.0
+offset_right = 248.0
+offset_bottom = 34.0
 
 [connection signal="pressed" from="ActionContainer/Attack" to="." method="_on_attack_pressed"]
 [connection signal="pressed" from="ActionContainer/StrongAttack" to="." method="_on_strong_attack_pressed"]

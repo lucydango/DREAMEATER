@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cug4vvvi5vnyo"]
+[gd_scene load_steps=15 format=3 uid="uid://cug4vvvi5vnyo"]
 
 [ext_resource type="Theme" uid="uid://dvt7s00aejcpi" path="res://Resources/HUD/maintheme.tres" id="1_hpkh5"]
 [ext_resource type="Script" path="res://scripts/PersistentHUD.gd" id="2_8ljum"]
@@ -9,6 +9,21 @@
 [ext_resource type="Texture2D" uid="uid://cw0bktp67ie6w" path="res://Sprites/HUD/str.png" id="6_jen4e"]
 [ext_resource type="Texture2D" uid="uid://f4nl0nje2q4p" path="res://Sprites/HUD/end.png" id="7_s4u07"]
 [ext_resource type="Texture2D" uid="uid://birupn8volstr" path="res://Sprites/HUD/exp.png" id="8_2q4hs"]
+[ext_resource type="Texture2D" uid="uid://xju2wmdvv7iu" path="res://Sprites/HUD/bg/bgstars2.png" id="11_fn333"]
+[ext_resource type="Texture2D" uid="uid://vc5bt478u1jr" path="res://Sprites/HUD/bg/bgstars3.png" id="12_f43tn"]
+[ext_resource type="Texture2D" uid="uid://cwovib8ufhx1h" path="res://Sprites/HUD/bg/bgstars4.png" id="13_pl6qn"]
+[ext_resource type="Texture2D" uid="uid://bvuuyxh1vl5xg" path="res://Sprites/HUD/bg/bgstars5.png" id="14_6ypxw"]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_pm2c5"]
+frames = 4
+speed_scale = 0.2
+frame_0/texture = ExtResource("11_fn333")
+frame_1/texture = ExtResource("12_f43tn")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("13_pl6qn")
+frame_2/duration = 1.0
+frame_3/texture = ExtResource("14_6ypxw")
+frame_3/duration = 1.0
 
 [node name="PersistentHUD" type="Control"]
 layout_mode = 3
@@ -20,9 +35,9 @@ script = ExtResource("2_8ljum")
 
 [node name="InventoryBox" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 793.0
+offset_left = 788.0
 offset_top = -185.0
-offset_right = 1536.0
+offset_right = 1531.0
 offset_bottom = 472.0
 mouse_filter = 2
 texture = ExtResource("3_4l44m")
@@ -127,4 +142,14 @@ expand_mode = 4
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_n3a3b")
+volume_db = 4.0
 autoplay = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+z_index = -5
+layout_mode = 0
+offset_right = 1148.0
+offset_bottom = 644.0
+mouse_filter = 2
+texture = SubResource("AnimatedTexture_pm2c5")
+stretch_mode = 1

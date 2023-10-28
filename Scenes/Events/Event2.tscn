@@ -1,20 +1,25 @@
-[gd_scene load_steps=2 format=3 uid="uid://dt6h5ke25oyxa"]
+[gd_scene load_steps=3 format=3 uid="uid://dt6h5ke25oyxa"]
 
 [ext_resource type="Script" path="res://scripts/Events/Event.gd" id="1_slg2r"]
+[ext_resource type="Texture2D" uid="uid://ckafigrg7qdrj" path="res://Sprites/HUD/frames/frametable.png" id="2_fpvk0"]
 
 [node name="Event" type="Node"]
 script = ExtResource("1_slg2r")
-frame = "res://Sprites/HUD/frames/frametable.png"
+frame = ExtResource("2_fpvk0")
 intro_text = "As you round the corner, you find a table, with two discoloured liquids atop it.
 
 For some reason, you feel compelled to try one."
 resolution_one_button_text = "Try the Red Liquid."
 resolution_two_button_text = "Try the Blue Liquid."
-resolution_one_text = "This drink is bitter-tasting, like a strongly brewed herbal tea. "
+resolution_one_text = "This drink is bitter-tasting, like a strongly brewed herbal tea. 
+
+As you drink, you are filled with a sense of overwhelming fullness. You could not drink any more."
 resolution_one_end_text = "You feel stronger.
 [+1 STR]"
 resolution_one_resolve_consequences = Array[String](["str + 1"])
-resolution_two_text = "The taste reminds you of an energy drink, acidic yet energizing."
+resolution_two_text = "The taste reminds you of an energy drink, acidic yet energizing.
+
+As you drink, you are filled with a sense of overwhelming fullness. You could not drink any more."
 resolution_two_end_text = "You feel more awake.
 [+1 END]"
 resolution_two_resolve_consequences = Array[String](["end + 1"])

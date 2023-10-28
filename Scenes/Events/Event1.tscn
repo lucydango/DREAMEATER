@@ -1,10 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://b63sseyg3bm7w"]
+[gd_scene load_steps=3 format=3 uid="uid://b63sseyg3bm7w"]
 
 [ext_resource type="Script" path="res://scripts/Events/Event.gd" id="1_li5os"]
+[ext_resource type="Texture2D" uid="uid://dxvjltxo6tsgg" path="res://Sprites/HUD/frames/framebooks.png" id="2_iakpd"]
 
 [node name="Event" type="Node"]
 script = ExtResource("1_li5os")
-frame = "res://Sprites/HUD/frames/framebooks.png"
+frame = ExtResource("2_iakpd")
 intro_text = "You enter a room filled with dusty old tomes, and with a small bed of hay in one of the corners."
 resolution_one_button_text = "Search through the
 tomes."
