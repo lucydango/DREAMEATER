@@ -1,8 +1,9 @@
-[gd_scene load_steps=18 format=3 uid="uid://cjmg3wv3pxl0k"]
+[gd_scene load_steps=19 format=3 uid="uid://cjmg3wv3pxl0k"]
 
 [ext_resource type="Theme" uid="uid://dvt7s00aejcpi" path="res://Resources/HUD/maintheme.tres" id="1_gy5oo"]
 [ext_resource type="Script" path="res://scripts/Combat/Combat.gd" id="2_15vv0"]
 [ext_resource type="Texture2D" uid="uid://dbm1sl7j4pujf" path="res://Sprites/HUD/longpanel.png" id="2_eyxwr"]
+[ext_resource type="Texture2D" uid="uid://bdpsabvs2u6hf" path="res://Sprites/HUD/nightmarephase2.png" id="3_su6gq"]
 [ext_resource type="Texture2D" uid="uid://dhbpcqptfs6m1" path="res://Sprites/HUD/nightmare.png" id="4_we1u3"]
 [ext_resource type="AudioStream" uid="uid://e1vcuyvdr2ni" path="res://Sounds/attack.wav" id="5_shy7w"]
 [ext_resource type="Texture2D" uid="uid://cpjppk83ao5ee" path="res://Sprites/flash.png" id="6_blkcw"]
@@ -84,6 +85,7 @@ grow_vertical = 2
 mouse_filter = 1
 theme = ExtResource("1_gy5oo")
 script = ExtResource("2_15vv0")
+phasetwo = ExtResource("3_su6gq")
 
 [node name="MainBox" type="TextureRect" parent="."]
 layout_mode = 0

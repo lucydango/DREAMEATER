@@ -32,7 +32,9 @@ var inventory = []
 @onready var inv_button = preload("res://Scenes/inv_button.tscn")
 # Misc.
 var update_hud_time = 0.1
-var runs = 0
+var runs = 1
+var damage_dealt = 0
+var damage_taken = 0
 var tutorial_read = false
 
 func _ready():
@@ -96,7 +98,8 @@ func use_item(item, slot):
 	
 	
 func load_final_combat():
-	scene_root.get_child(0).queue_free()
+	for i in scene_root.get_children():
+		i.queue_free()
 	var combat_loaded = combat.instantiate()
 	scene_root.add_child(combat_loaded)	
 	

@@ -3,6 +3,7 @@ extends Control
 signal final_combat
 # Will be filled with loaded events
 var events = []
+var events_this_run = []
 @export var events_preload: Array[PackedScene]
 var current_event = null
 var current_event_id = 0
@@ -22,6 +23,8 @@ var current_state = states.NEW_EVENT
 @onready var root = get_node("/root/PersistentHUD")
 
 func _ready():
+	print("instantiated")
+	print(events_preload)
 	connect("final_combat", root.load_final_combat)
 	var dir = DirAccess.open("res://Scenes/Events")
 	var event = dir.list_dir_begin()
@@ -70,9 +73,12 @@ func resolve_event():
 	if resolve_consequences:
 		for i in resolve_consequences:
 			root.parse_consequence_string(i)
-	current_event = events[randi_range(0, len(events) - 1)]
-	while current_event.instantiate().prerequisite >= root.max_hp:
-		current_event = events[randi_range(0, len(events) - 1)]
+	events_this_run.append(current_event)
+	current_event_id = randi_range(0, len(events) - 1)
+	current_event = events[current_event_id]
+	while current_event.instantiate().prerequisite >= root.max_hp || current_event in events_this_run:
+		current_event_id = randi_range(0, len(events) - 1)
+		current_event = events[current_event_id]
 	current_state = states.INTERMISSION
 	events_run += 1
 	

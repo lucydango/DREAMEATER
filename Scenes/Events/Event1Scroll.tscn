@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://p037m0bkb2b1"]
+
+[ext_resource type="Script" path="res://scripts/Events/Event.gd" id="1_edda6"]
+[ext_resource type="Texture2D" uid="uid://dxvjltxo6tsgg" path="res://Sprites/HUD/frames/framebooks.png" id="2_rx43e"]
+
+[node name="Event" type="Node"]
+script = ExtResource("1_edda6")
+frame = ExtResource("2_rx43e")
+intro_text = "You enter a room filled with dusty old tomes, and with a small bed of hay in one of the corners."
+resolution_one_button_text = "Search through the
+tomes."
+resolution_two_button_text = "Take a nap in
+the bed."
+resolution_one_text = "The words on the pages dance, flitting from meaning to meaning as if to mock you. You can't make sense of them."
+resolution_one_end_text = "What does it mean?"
+resolution_two_text = "You snuff out the candles and nap upon the hay bed, entering a second sleep from within your own slumber. 
+
+You are soon awoken by the sound of scratching, seeming to come from all around you. 
+
+You decide it is best to leave."
+resolution_two_end_text = "You needed that nap.
+[+1 MAX STAM]"
+resolution_two_resolve_consequences = Array[String](["max_stam + 1"])

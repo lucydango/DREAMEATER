@@ -17,7 +17,7 @@ Photos of you in settings you do not remember, doing things you have never done,
 Where did these photos come from?"
 resolution_one_end_text = "Why can't you 
 remember?
-[-1 MAX_HP]"
+[-1 MAX HP]"
 resolution_one_resolve_consequences = Array[String](["max_hp - 1"])
 resolution_two_text = "For some reason, the sight of the photos throws you into a blind rage.
 

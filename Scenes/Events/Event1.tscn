@@ -11,8 +11,13 @@ resolution_one_button_text = "Search through the
 tomes."
 resolution_two_button_text = "Take a nap in
 the bed."
-resolution_one_text = "The words on the pages dance, flitting from meaning to meaning as if to mock you. You can't make sense of them."
-resolution_one_end_text = "What does it mean?"
+resolution_one_text = "The words on the pages dance, flitting from meaning to meaning as if to mock you. You can't make sense of them.
+
+However, as you're about to give up, a strange scroll falls from one of the books. Could it be useful?"
+resolution_one_end_text = "Only one way
+to find out.
+[+1 SCROLL]"
+resolution_one_resolve_consequences = Array[String](["STAM_SCROLL +"])
 resolution_two_text = "You snuff out the candles and nap upon the hay bed, entering a second sleep from within your own slumber. 
 
 You are soon awoken by the sound of scratching, seeming to come from all around you. 

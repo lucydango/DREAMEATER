@@ -25,4 +25,4 @@ resolution_two_text = "You dash as fast as you can, weaving between each set of 
 You escape unscathed, but exhausted."
 resolution_two_end_text = "Better tired than dead.
 [STAM -4; END +2]"
-resolution_two_resolve_consequences = Array[String](["stam -4", "end +2"])
+resolution_two_resolve_consequences = Array[String](["stam - 4", "end + 2"])

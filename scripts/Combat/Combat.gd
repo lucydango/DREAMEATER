@@ -11,7 +11,7 @@ extends Control
 # Misc
 var take_turn = false
 var time_until = -1
-
+@export var phasetwo: Texture2D
 # Flavour 
 var intro_text = [
 	"It's just like every time before.\n\nAs the walls close in on you, through them seep black, oily tendrils which sharpen to a point at their end.\n\nLarge and imposing they flail, aimless yet vicious."]
@@ -43,15 +43,20 @@ func nightmare_ai():
 	var nightmare_action = randi_range(0, 2) if !phase_two_started else randi_range(0, len(nightmare_actions) - 1)
 	if nightmare_actions[nightmare_action] == "ATTACK":
 		root.hp -= 4 * ((int(phase_two_started) * 2) + 1)
+		root.damage_taken += 4 * ((int(phase_two_started) * 2) + 1)
 	elif nightmare_actions[nightmare_action] == "DRAIN":
 		root.stam -= 2 * ((int(phase_two_started) * 4) + 1)
 		if root.stam < 0:
 			root.stam = 0
 	elif nightmare_actions[nightmare_action] == "DEVOUR":
 		root.hp -= 5 * ((int(phase_two_started) * 2) + 1)
+		root.damage_taken += 5 * ((int(phase_two_started) * 2) + 1)
 	elif nightmare_actions[nightmare_action] == "SCRAPE":
 		root.hp -= 2 * ((int(phase_two_started) * 2) + 1)
+		root.damage_taken += 2 * ((int(phase_two_started) * 2) + 1)
 		root.stam -= 2 * ((int(phase_two_started) * 2) + 1)
+		if root.stam < 0:
+			root.stam = 0
 	return nightmare_action_texts[nightmare_action]
 	
 func turn():
@@ -60,12 +65,20 @@ func turn():
 	turn_text += nightmare_ai()
 	if nightmare_hp < 350 && nightmare_hp > 300:
 		turn_text += "\n\nYou hear pained screams and wails from within the walls."
+	if nightmare_hp < 100:
+		turn_text += "\n\nThe beast wails and bleeds. You're so close..."
+	elif nightmare_hp < 200:
+		turn_text += "\n\nThe beast wails as you attack..."
 	if nightmare_hp < 300 && !phase_two_started:
 		turn_text = "As you land your blow, reality itself seems to contort. You lose grasp of your body, and feel weightless - almost formless.\n\n
 		In front of you, the true nature of your nightmare reveals itself, the sentient labyrinth itself moves to reclaim you!"
 		event_text.text = turn_text
 		main_box.get_node("EnemyText").text = "Labyrinth"
-		main_box.get_node("ImageFrame").texture = ImageTexture.create_from_image(Image.load_from_file("res://Sprites/HUD/nightmarephase2.png"))
+		main_box.get_node("ImageFrame").texture = phasetwo
+		var anim = get_node("AttackAnim")
+		anim.play()
+		time_until = 0.765
+		get_node("AttackPlayer").pitch_scale = 0.5
 		phase_two_started = true
 		return
 	event_text.text = turn_text
@@ -73,6 +86,8 @@ func turn():
 		var anim = get_node("AttackAnim")
 		anim.play()
 		time_until = 0.765
+		if nightmare_hp < 300:
+			get_node("AttackPlayer").pitch_scale = 0.5
 	root.exp += 1
 	if root.exp == 10:
 		root.parse_consequence_string(["str", "end", "max_hp", "max_stam"][randi_range(0,3)]+" + 1")
@@ -101,6 +116,7 @@ func _process(delta):
 func _on_attack_pressed():
 	if root.stam > 0:
 		root.stam -= 1
+		root.damage_dealt += root.str
 		nightmare_hp -= root.str
 		action = combat_actions.ATTACK
 		take_turn = true
@@ -121,5 +137,6 @@ func _on_strong_attack_pressed():
 	if root.stam > 2:
 		root.stam -= 3
 		nightmare_hp -= root.str * 3
+		root.damage_dealt += root.str * 3
 		action = combat_actions.STRONG_ATTACK
 		take_turn = true

@@ -1,0 +1,47 @@
+[gd_scene load_steps=4 format=3 uid="uid://dc0q1rwumjnde"]
+
+[ext_resource type="Theme" uid="uid://dvt7s00aejcpi" path="res://Resources/HUD/maintheme.tres" id="1_hmb5e"]
+[ext_resource type="Script" path="res://scripts/CWBox.gd" id="2_y0oui"]
+[ext_resource type="Texture2D" uid="uid://dbm1sl7j4pujf" path="res://Sprites/HUD/longpanel.png" id="3_bst45"]
+
+[node name="TutorialHUD" type="Control"]
+z_index = 5
+z_as_relative = false
+layout_mode = 3
+anchors_preset = 0
+theme = ExtResource("1_hmb5e")
+script = ExtResource("2_y0oui")
+
+[node name="MainBox" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 2.0
+offset_right = 788.0
+offset_bottom = 648.0
+texture = ExtResource("3_bst45")
+
+[node name="EventText" type="Label" parent="MainBox"]
+layout_mode = 0
+offset_left = 87.0
+offset_top = 64.0
+offset_right = 694.0
+offset_bottom = 476.0
+text = "CONTENT WARNING
+
+DREAMEATER contains mild pixellated & written depictions of body horror & violence. 
+
+If you are particularly sensitive to that kind of imagery you may not wish to play this game."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Button" type="Button" parent="MainBox"]
+layout_mode = 0
+offset_left = 319.0
+offset_top = 438.0
+offset_right = 452.0
+offset_bottom = 511.0
+action_mode = 0
+text = "OK"
+
+[connection signal="pressed" from="MainBox/Button" to="." method="_on_button_pressed"]
