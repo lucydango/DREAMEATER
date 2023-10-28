@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://wdirr5hei8e3"]
+
+[ext_resource type="Script" path="res://scripts/Events/Event.gd" id="1_0bv1y"]
+
+[node name="Event" type="Node"]
+script = ExtResource("1_0bv1y")
+frame = "res://Sprites/HUD/frames/frameempty.png"
+prerequisite = 999
+intro_text = "You have been wandering this labyrinth for what feels like an eternity.
+
+Something about it feels almost ethereal... Could you be dreaming?"
+resolution_one_button_text = "Hold your nose shut. 
+Breathe in."
+resolution_two_button_text = "Pinch yourself. 
+Hard."
+resolution_one_text = "You attempt to breathe through your shut nose. You can. You must be dreaming.
+
+In fact, you're sure you've had this dream before."
+resolution_one_end_text = "Press on."
+resolution_two_text = "You pinch yourself. Ow! It hurts... But the pain reminds you of something... 
+
+You've had dreams like this before, where you can feel pain as vividly as real life. "
+resolution_two_end_text = "Press on."

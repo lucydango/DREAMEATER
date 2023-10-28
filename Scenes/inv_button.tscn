@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bu6jglmerqpkq"]
+
+[ext_resource type="Script" path="res://scripts/Events/inv_button.gd" id="1_x7r3m"]
+
+[node name="inv_button" type="Button"]
+script = ExtResource("1_x7r3m")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

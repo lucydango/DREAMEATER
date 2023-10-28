@@ -1,0 +1,155 @@
+[gd_scene load_steps=16 format=3 uid="uid://cjmg3wv3pxl0k"]
+
+[ext_resource type="Theme" uid="uid://dvt7s00aejcpi" path="res://Resources/HUD/maintheme.tres" id="1_gy5oo"]
+[ext_resource type="Script" path="res://scripts/Combat/Combat.gd" id="2_15vv0"]
+[ext_resource type="Texture2D" uid="uid://dbm1sl7j4pujf" path="res://Sprites/HUD/longpanel.png" id="2_eyxwr"]
+[ext_resource type="Texture2D" uid="uid://dhbpcqptfs6m1" path="res://Sprites/HUD/nightmare.png" id="4_we1u3"]
+[ext_resource type="AudioStream" uid="uid://e1vcuyvdr2ni" path="res://Sounds/attack.wav" id="5_shy7w"]
+[ext_resource type="Texture2D" uid="uid://cpjppk83ao5ee" path="res://Sprites/flash.png" id="6_blkcw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7m4fd"]
+atlas = ExtResource("6_blkcw")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rn28p"]
+atlas = ExtResource("6_blkcw")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_81ten"]
+atlas = ExtResource("6_blkcw")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h36f7"]
+atlas = ExtResource("6_blkcw")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fc4p5"]
+atlas = ExtResource("6_blkcw")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i12rx"]
+atlas = ExtResource("6_blkcw")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sctme"]
+atlas = ExtResource("6_blkcw")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ety0g"]
+atlas = ExtResource("6_blkcw")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7krl3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7m4fd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rn28p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_81ten")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h36f7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fc4p5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i12rx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sctme")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ety0g")
+}],
+"loop": false,
+"name": &"default",
+"speed": 7.0
+}]
+
+[node name="CombatHUD" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -412.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme = ExtResource("1_gy5oo")
+script = ExtResource("2_15vv0")
+
+[node name="MainBox" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 2.0
+offset_right = 788.0
+offset_bottom = 648.0
+texture = ExtResource("2_eyxwr")
+
+[node name="ImageFrame" type="TextureRect" parent="MainBox"]
+layout_mode = 0
+offset_left = 113.0
+offset_top = 120.0
+offset_right = 409.0
+offset_bottom = 306.0
+texture = ExtResource("4_we1u3")
+
+[node name="EventText" type="Label" parent="MainBox"]
+layout_mode = 0
+offset_left = 418.0
+offset_top = 125.0
+offset_right = 693.0
+offset_bottom = 346.0
+mouse_filter = 1
+text = "As you round the corner, you see a cute puppy! Woag... You must decide, pet it? Or KILL IT!?"
+autowrap_mode = 2
+
+[node name="EnemyText" type="Label" parent="MainBox"]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 313.0
+offset_right = 392.0
+offset_bottom = 335.0
+mouse_filter = 1
+text = "???"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="ActionContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 171.0
+offset_top = 466.0
+offset_right = 650.0
+offset_bottom = 522.0
+
+[node name="Attack" type="Button" parent="ActionContainer"]
+layout_mode = 2
+text = "ATTACK
+(-1 STAM)"
+
+[node name="StrongAttack" type="Button" parent="ActionContainer"]
+layout_mode = 2
+text = "STRONG ATTACK
+(-3 STAM)"
+
+[node name="Recover" type="Button" parent="ActionContainer"]
+layout_mode = 2
+text = "RECOVER
+(+END STAM)"
+
+[node name="AttackPlayer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_shy7w")
+
+[node name="AttackAnim" type="AnimatedSprite2D" parent="."]
+position = Vector2(265, 215)
+scale = Vector2(4.15625, 2.4375)
+sprite_frames = SubResource("SpriteFrames_7krl3")
+
+[connection signal="pressed" from="ActionContainer/Attack" to="." method="_on_attack_pressed"]
+[connection signal="pressed" from="ActionContainer/StrongAttack" to="." method="_on_strong_attack_pressed"]
+[connection signal="pressed" from="ActionContainer/Recover" to="." method="_on_recover_pressed"]

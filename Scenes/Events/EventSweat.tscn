@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=3 uid="uid://dbhoc2dfyqegl"]
+
+[ext_resource type="Script" path="res://scripts/Events/Event.gd" id="1_oumda"]
+
+[node name="Event" type="Node"]
+script = ExtResource("1_oumda")
+frame = "res://Sprites/HUD/frames/framesweat.png"
+intro_text = "Something is very wrong with the walls and floor here. It seems to be... Sweating?
+
+A brown liquid oozes out of the tunnel ahead."
+resolution_one_button_text = "Wade through."
+resolution_two_button_text = "Go back and try to
+find another way."
+resolution_one_text = "As you step into the liquid, you feel it eat away at your skin. It seems to be some sort of acid.
+
+As it washes off, however, it seems to leave your skin harder than it was before."
+resolution_one_end_text = "How peculiar...
+[-2 HP, +3 MAX HP]"
+resolution_one_resolve_consequences = Array[String](["hp - 2", "max_hp + 3"])
+resolution_two_text = "Eventually, you find a safer passage.
+
+However, the wasted time seems to have taken it's toll on your body."
+resolution_two_end_text = "Better tired than dead.
+[STAM - 2; END + 1]"
+resolution_two_resolve_consequences = Array[String](["end + 1", "stam - 2"])

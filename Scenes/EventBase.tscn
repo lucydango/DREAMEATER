@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dnfa8mdix2jxn"]
+
+[ext_resource type="Script" path="res://scripts/Events/Event.gd" id="1_ljbp5"]
+
+[node name="Event" type="Node"]
+script = ExtResource("1_ljbp5")
+resolution_one_button_text = "b"
+resolution_two_button_text = "c"
+resolution_one_text = "d"
+resolution_one_end_text = "e"
+resolution_two_text = "f"

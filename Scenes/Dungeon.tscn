@@ -1,0 +1,60 @@
+[gd_scene load_steps=6 format=3 uid="uid://dqcao1arx4bwe"]
+
+[ext_resource type="Theme" uid="uid://dvt7s00aejcpi" path="res://Resources/HUD/maintheme.tres" id="1_rfobi"]
+[ext_resource type="Script" path="res://Scenes/Dungeon.gd" id="2_s1krc"]
+[ext_resource type="Texture2D" uid="uid://dbm1sl7j4pujf" path="res://Sprites/HUD/longpanel.png" id="3_3h3tq"]
+[ext_resource type="Texture2D" uid="uid://dsroga43q2v4b" path="res://Sprites/HUD/frames/frameempty.png" id="4_pp7sp"]
+[ext_resource type="PackedScene" uid="uid://dccb7cyqvwi5f" path="res://Scenes/Intermission.tscn" id="5_hj8li"]
+
+[node name="DungeonHUD" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+theme = ExtResource("1_rfobi")
+script = ExtResource("2_s1krc")
+
+[node name="MainBox" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 2.0
+offset_right = 788.0
+offset_bottom = 648.0
+texture = ExtResource("3_3h3tq")
+
+[node name="ImageFrame" type="TextureRect" parent="MainBox"]
+layout_mode = 0
+offset_left = 113.0
+offset_top = 120.0
+offset_right = 409.0
+offset_bottom = 306.0
+texture = ExtResource("4_pp7sp")
+
+[node name="ResolutionOne" type="Button" parent="MainBox"]
+layout_mode = 2
+offset_left = 115.0
+offset_top = 383.0
+offset_right = 386.0
+offset_bottom = 526.0
+text = "Doggy!"
+
+[node name="ResolutionTwo" type="Button" parent="MainBox"]
+layout_mode = 2
+offset_left = 389.0
+offset_top = 383.0
+offset_right = 660.0
+offset_bottom = 526.0
+text = "Doggy!"
+
+[node name="EventText" type="Label" parent="MainBox"]
+layout_mode = 0
+offset_left = 420.0
+offset_top = 122.0
+offset_right = 692.0
+offset_bottom = 343.0
+text = "As you round the corner, you see a cute puppy! Woag... You must decide, pet it? Or KILL IT!?"
+autowrap_mode = 2
+
+[node name="IntermissionHUD" parent="." instance=ExtResource("5_hj8li")]
+visible = false
+
+[connection signal="pressed" from="MainBox/ResolutionOne" to="." method="_on_resolution_one_pressed"]
+[connection signal="pressed" from="MainBox/ResolutionTwo" to="." method="_on_resolution_two_pressed"]

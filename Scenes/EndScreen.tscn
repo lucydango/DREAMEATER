@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://ct2pcgi2gsmiv"]
+
+[ext_resource type="Theme" uid="uid://dvt7s00aejcpi" path="res://Resources/HUD/maintheme.tres" id="1_ex8a0"]
+[ext_resource type="Texture2D" uid="uid://dbm1sl7j4pujf" path="res://Sprites/HUD/longpanel.png" id="3_g1ky6"]
+
+[node name="EndHUD" type="Control"]
+z_index = 5
+z_as_relative = false
+layout_mode = 3
+anchors_preset = 0
+theme = ExtResource("1_ex8a0")
+
+[node name="MainBox" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 2.0
+offset_right = 788.0
+offset_bottom = 648.0
+texture = ExtResource("3_g1ky6")
+
+[node name="EventText" type="Label" parent="MainBox"]
+layout_mode = 0
+offset_left = 86.0
+offset_top = 119.0
+offset_right = 693.0
+offset_bottom = 533.0
+text = "As your strike lands true, you feel the very foundations of the dream world begin to falter."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2

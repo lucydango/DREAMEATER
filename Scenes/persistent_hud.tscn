@@ -1,0 +1,130 @@
+[gd_scene load_steps=10 format=3 uid="uid://cug4vvvi5vnyo"]
+
+[ext_resource type="Theme" uid="uid://dvt7s00aejcpi" path="res://Resources/HUD/maintheme.tres" id="1_hpkh5"]
+[ext_resource type="Script" path="res://scripts/PersistentHUD.gd" id="2_8ljum"]
+[ext_resource type="Texture2D" uid="uid://c1hwkrj02qfqw" path="res://Sprites/HUD/panel.png" id="3_4l44m"]
+[ext_resource type="Texture2D" uid="uid://clyrfyx8ot34q" path="res://Sprites/HUD/hp.png" id="4_2puoj"]
+[ext_resource type="AudioStream" uid="uid://ca7n3ahoaj1c0" path="res://Sounds/temp.wav" id="4_n3a3b"]
+[ext_resource type="Texture2D" uid="uid://bf3msq7x47e8j" path="res://Sprites/HUD/stam.png" id="5_lfndc"]
+[ext_resource type="Texture2D" uid="uid://cw0bktp67ie6w" path="res://Sprites/HUD/str.png" id="6_jen4e"]
+[ext_resource type="Texture2D" uid="uid://f4nl0nje2q4p" path="res://Sprites/HUD/end.png" id="7_s4u07"]
+[ext_resource type="Texture2D" uid="uid://birupn8volstr" path="res://Sprites/HUD/exp.png" id="8_2q4hs"]
+
+[node name="PersistentHUD" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme = ExtResource("1_hpkh5")
+script = ExtResource("2_8ljum")
+
+[node name="InventoryBox" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 793.0
+offset_top = -185.0
+offset_right = 1536.0
+offset_bottom = 472.0
+mouse_filter = 2
+texture = ExtResource("3_4l44m")
+stretch_mode = 4
+
+[node name="InventoryContainer" type="VBoxContainer" parent="InventoryBox"]
+layout_mode = 0
+offset_left = 91.0
+offset_top = 203.0
+offset_right = 248.0
+offset_bottom = 243.0
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="InventoryBox/InventoryContainer"]
+layout_mode = 2
+mouse_filter = 0
+text = "INVENTORY:"
+
+[node name="StatsBox" type="TextureRect" parent="."]
+z_index = -1
+layout_mode = 0
+offset_left = 788.0
+offset_top = 286.0
+offset_right = 1531.0
+offset_bottom = 943.0
+mouse_filter = 0
+texture = ExtResource("3_4l44m")
+stretch_mode = 4
+
+[node name="StatContainer" type="VBoxContainer" parent="StatsBox"]
+layout_mode = 0
+offset_left = 175.0
+offset_top = 132.0
+offset_right = 299.0
+offset_bottom = 347.0
+mouse_filter = 0
+theme_override_constants/separation = 10
+
+[node name="HealthLabel" type="Label" parent="StatsBox/StatContainer"]
+layout_mode = 2
+mouse_filter = 0
+theme_override_font_sizes/font_size = 32
+text = "4/5 HP"
+
+[node name="StaminaLabel" type="Label" parent="StatsBox/StatContainer"]
+layout_mode = 2
+mouse_filter = 0
+theme_override_font_sizes/font_size = 32
+text = "1/2 STM"
+
+[node name="StrengthLabel" type="Label" parent="StatsBox/StatContainer"]
+layout_mode = 2
+mouse_filter = 0
+theme_override_font_sizes/font_size = 32
+text = "2 STR"
+
+[node name="EnduranceLabel" type="Label" parent="StatsBox/StatContainer"]
+layout_mode = 2
+mouse_filter = 0
+theme_override_font_sizes/font_size = 32
+text = "2 END"
+
+[node name="EXPLabel" type="Label" parent="StatsBox/StatContainer"]
+layout_mode = 2
+mouse_filter = 0
+theme_override_font_sizes/font_size = 32
+text = "0/EXP"
+
+[node name="StatImgs" type="VBoxContainer" parent="StatsBox"]
+layout_mode = 0
+offset_left = 113.0
+offset_top = 124.0
+offset_right = 153.0
+offset_bottom = 340.0
+
+[node name="HP" type="TextureRect" parent="StatsBox/StatImgs"]
+layout_mode = 2
+texture = ExtResource("4_2puoj")
+expand_mode = 4
+
+[node name="STAM" type="TextureRect" parent="StatsBox/StatImgs"]
+layout_mode = 2
+texture = ExtResource("5_lfndc")
+expand_mode = 4
+
+[node name="STR" type="TextureRect" parent="StatsBox/StatImgs"]
+layout_mode = 2
+texture = ExtResource("6_jen4e")
+expand_mode = 4
+
+[node name="END" type="TextureRect" parent="StatsBox/StatImgs"]
+layout_mode = 2
+texture = ExtResource("7_s4u07")
+expand_mode = 4
+
+[node name="EXP" type="TextureRect" parent="StatsBox/StatImgs"]
+layout_mode = 2
+texture = ExtResource("8_2q4hs")
+expand_mode = 4
+
+[node name="SceneRoot" type="Node" parent="."]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_n3a3b")
+autoplay = true

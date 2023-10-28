@@ -1,0 +1,35 @@
+[gd_scene load_steps=8 format=3 uid="uid://mvrvhx6htlfm"]
+
+[ext_resource type="Texture2D" uid="uid://cm1vasoi1ddp6" path="res://Sprites/flash/flash1.png" id="1_t5xt8"]
+[ext_resource type="Texture2D" uid="uid://cfae4c0eybi8v" path="res://Sprites/flash/flash2.png" id="2_pc27r"]
+[ext_resource type="Texture2D" uid="uid://dlarb7kop7gpi" path="res://Sprites/flash/flash3.png" id="3_j0b7b"]
+[ext_resource type="Texture2D" uid="uid://bpl8jnrfyt51c" path="res://Sprites/flash/flash5.png" id="4_q48it"]
+[ext_resource type="Texture2D" uid="uid://dkildlt8jeile" path="res://Sprites/flash/flash6.png" id="5_eibrp"]
+[ext_resource type="Texture2D" uid="uid://c5f5jw842vmiw" path="res://Sprites/flash/flash7.png" id="6_dxfog"]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_7ykn5"]
+frames = 7
+one_shot = true
+speed_scale = 7.0
+frame_0/texture = ExtResource("1_t5xt8")
+frame_1/texture = ExtResource("2_pc27r")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("2_pc27r")
+frame_2/duration = 1.0
+frame_3/texture = ExtResource("3_j0b7b")
+frame_3/duration = 1.0
+frame_4/texture = ExtResource("4_q48it")
+frame_4/duration = 1.0
+frame_5/texture = ExtResource("5_eibrp")
+frame_5/duration = 1.0
+frame_6/texture = ExtResource("6_dxfog")
+frame_6/duration = 1.0
+
+[node name="AttackAnim" type="TextureRect"]
+z_index = 3
+offset_left = 117.0
+offset_top = 123.0
+offset_right = 413.0
+offset_bottom = 308.0
+texture = SubResource("AnimatedTexture_7ykn5")
+stretch_mode = 1

@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://x4j0qmwr7msm"]
+
+[ext_resource type="Script" path="res://scripts/Events/Event.gd" id="1_0wbms"]
+
+[node name="Event" type="Node"]
+script = ExtResource("1_0wbms")
+frame = "res://Sprites/HUD/frames/framedoor.png"
+prerequisite = 10
+intro_text = "The tunnel here is lined with... Corpses?
+
+Decomposing bodies lie here, slowly being absorbed into the walls & floor.
+
+"
+resolution_one_button_text = "See if any of them
+have anything worth
+taking."
+resolution_two_button_text = "Mourn them
+silently."
+resolution_one_text = "Some of the corpses still seem to be wearing clothes.
+
+You take a look in their pockets and find what seems to be some strange scroll, written in a script you do not know or understand."
+resolution_one_end_text = "Could you use it?
+[+1 STAM SCROLL]"
+resolution_one_resolve_consequences = Array[String](["STAM_SCROLL +"])
+resolution_two_text = "Although you're not sure if these bodies ever belonged to real people, you feel a strange kinship to them.
+
+You pray you will not meet the same fate."
+resolution_two_end_text = "You vow to avenge.
+[+2 STR, +2 MAX HP]"
+resolution_two_resolve_consequences = Array[String](["str + 2", "max_hp + 2"])

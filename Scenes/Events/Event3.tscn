@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://c42vp0bodo2w5"]
+
+[ext_resource type="Script" path="res://scripts/Events/Event.gd" id="1_hy5lb"]
+
+[node name="Event" type="Node"]
+script = ExtResource("1_hy5lb")
+frame = "res://Sprites/HUD/frames/frameempty.png"
+intro_text = "For once, you find yourself walking down an extended stretch of empty hallway."
+resolution_one_button_text = "Steel yourself."
+resolution_two_button_text = "Rest for a moment."
+resolution_one_text = "You remind yourself to be prepared for whatever is ahead."
+resolution_one_end_text = "OK.
+[+2 MAX HP]"
+resolution_one_resolve_consequences = Array[String](["max_hp + 2"])
+resolution_two_text = "You sit down for a while. You never knew it was possible to be so exhausted within a dream."
+resolution_two_end_text = "You feel ready.
+[+1 MAX STAM]"
+resolution_two_resolve_consequences = Array[String](["max_stam + 1"])

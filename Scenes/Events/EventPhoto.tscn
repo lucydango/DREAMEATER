@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://b5rqdyq0onl6o"]
+
+[ext_resource type="Script" path="res://scripts/Events/Event.gd" id="1_u2dlt"]
+
+[node name="Event" type="Node"]
+script = ExtResource("1_u2dlt")
+frame = "res://Sprites/HUD/frames/framephotos.png"
+prerequisite = 15
+intro_text = "The wall of this corridor is lined with what looks like polaroid photos."
+resolution_one_button_text = "Take a closer look."
+resolution_two_button_text = "Tear them down."
+resolution_one_text = "As you look closer, you realise, all these photos are of you.
+
+Photos of you in settings you do not remember, doing things you have never done, talking with people you have never known.
+
+Where did these photos come from?"
+resolution_one_end_text = "Why can't you 
+remember?
+[-1 MAX_HP]"
+resolution_one_resolve_consequences = Array[String](["max_hp - 1"])
+resolution_two_text = "For some reason, the sight of the photos throws you into a blind rage.
+
+You tear every last photo down, ripping each to shreds and crushing them underfoot."
+resolution_two_end_text = "Anger courses 
+through you.
+[+3 STR]"
+resolution_two_resolve_consequences = Array[String](["str + 3"])

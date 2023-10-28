@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://dt6h5ke25oyxa"]
+
+[ext_resource type="Script" path="res://scripts/Events/Event.gd" id="1_slg2r"]
+
+[node name="Event" type="Node"]
+script = ExtResource("1_slg2r")
+frame = "res://Sprites/HUD/frames/frametable.png"
+intro_text = "As you round the corner, you find a table, with two discoloured liquids atop it.
+
+For some reason, you feel compelled to try one."
+resolution_one_button_text = "Try the Red Liquid."
+resolution_two_button_text = "Try the Blue Liquid."
+resolution_one_text = "This drink is bitter-tasting, like a strongly brewed herbal tea. "
+resolution_one_end_text = "You feel stronger.
+[+1 STR]"
+resolution_one_resolve_consequences = Array[String](["str + 1"])
+resolution_two_text = "The taste reminds you of an energy drink, acidic yet energizing."
+resolution_two_end_text = "You feel more awake.
+[+1 END]"
+resolution_two_resolve_consequences = Array[String](["end + 1"])

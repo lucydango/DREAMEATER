@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=3 uid="uid://dbh2xysiwtq2d"]
+
+[ext_resource type="Script" path="res://scripts/Events/Event.gd" id="1_8lcu4"]
+
+[node name="Event" type="Node"]
+script = ExtResource("1_8lcu4")
+frame = "res://Sprites/HUD/frames/frameflesh.png"
+prerequisite = 10
+intro_text = "A large chunk of wall is missing here. In it's place, a writhing mass of tendrils.
+
+Somehow, they call to you. \"Complete us.\""
+resolution_one_button_text = "Approach them."
+resolution_two_button_text = "Leave. Immediately."
+resolution_one_text = "As you approach, the tendrils grab ahold of you and begin to tear off pieces of your flesh.
+
+The pain is agonising as the wall is \"completed\" once again, and what's left of you is released, free to go."
+resolution_one_end_text = "A part of myself...
+[-4 MAX HP]
+[+2 STR, +2 END]"
+resolution_one_resolve_consequences = Array[String](["max_hp - 4", "str + 2", "end + 2"])
+resolution_two_text = "You leave immediately. 
+
+Whatever those things want from you, it clearly isn't in your best interest."
+resolution_two_end_text = "It was the only
+sane choice."

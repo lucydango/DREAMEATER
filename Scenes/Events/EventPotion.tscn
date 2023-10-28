@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://bisfetr5cryjg"]
+
+[ext_resource type="Script" path="res://scripts/Events/Event.gd" id="1_wqx46"]
+
+[node name="Event" type="Node"]
+script = ExtResource("1_wqx46")
+frame = "res://Sprites/HUD/frames/framepotion.png"
+intro_text = "The hallway here is strewn with strange flasks dangling from chains. They are filled with some mysterious liquid."
+resolution_one_button_text = "Snatch one and
+stash it for later."
+resolution_two_button_text = "Don't risk it."
+resolution_one_text = "You take a flask and stash it in a pocket.
+
+Taking a look, the liquid seems viscous, like a thick soup. You can see small pieces of... something floating around inside it."
+resolution_one_end_text = "Bottoms up!
+[+1 POTION]"
+resolution_one_resolve_consequences = Array[String](["POTION +"])
+resolution_two_text = "Anything could be in those flasks. You decide it's a better idea to keep your pockets for more interesting items."
+resolution_two_end_text = "Moving on."
+resolution_two_resolve_consequences = Array[String](["max_stam + 1"])
