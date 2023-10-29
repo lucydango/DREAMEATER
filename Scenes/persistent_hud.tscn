@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://cug4vvvi5vnyo"]
+[gd_scene load_steps=15 format=3 uid="uid://cug4vvvi5vnyo"]
 
 [ext_resource type="Theme" uid="uid://dvt7s00aejcpi" path="res://Resources/HUD/maintheme.tres" id="1_hpkh5"]
 [ext_resource type="Script" path="res://scripts/PersistentHUD.gd" id="2_8ljum"]
@@ -13,7 +13,6 @@
 [ext_resource type="Texture2D" uid="uid://vc5bt478u1jr" path="res://Sprites/HUD/bg/bgstars3.png" id="12_f43tn"]
 [ext_resource type="Texture2D" uid="uid://cwovib8ufhx1h" path="res://Sprites/HUD/bg/bgstars4.png" id="13_pl6qn"]
 [ext_resource type="Texture2D" uid="uid://bvuuyxh1vl5xg" path="res://Sprites/HUD/bg/bgstars5.png" id="14_6ypxw"]
-[ext_resource type="PackedScene" uid="uid://dc0q1rwumjnde" path="res://Scenes/CWBox.tscn" id="14_nvreu"]
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_pm2c5"]
 frames = 4
@@ -163,10 +162,4 @@ offset_right = 81.0
 offset_bottom = 656.0
 mouse_filter = 0
 theme_override_font_sizes/font_size = 32
-text = "v0.8"
-
-[node name="TutorialHUD" parent="." instance=ExtResource("14_nvreu")]
-offset_left = 405.0
-offset_top = 63.0
-offset_right = 405.0
-offset_bottom = 63.0
+text = "v0.91"

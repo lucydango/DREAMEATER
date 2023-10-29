@@ -18,4 +18,3 @@ resolution_one_end_text = "Bottoms up!
 resolution_one_resolve_consequences = Array[String](["POTION +"])
 resolution_two_text = "Anything could be in those flasks. You decide it's a better idea to keep your pockets for more interesting items."
 resolution_two_end_text = "Moving on."
-resolution_two_resolve_consequences = Array[String](["max_stam + 1"])

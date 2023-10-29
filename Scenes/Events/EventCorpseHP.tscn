@@ -27,5 +27,5 @@ resolution_two_text = "Although you're not sure if these bodies ever belonged to
 
 You pray you will not meet the same fate."
 resolution_two_end_text = "You vow to avenge.
-[+2 STR, +2 MAX HP]"
-resolution_two_resolve_consequences = Array[String](["str + 2", "max_hp + 2"])
+[+2 STR, +4 MAX HP]"
+resolution_two_resolve_consequences = Array[String](["str + 2", "max_hp + 4"])

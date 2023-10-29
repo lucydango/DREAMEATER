@@ -126,9 +126,9 @@ autowrap_mode = 2
 
 [node name="ActionContainer" type="HBoxContainer" parent="."]
 layout_mode = 0
-offset_left = 171.0
+offset_left = 153.0
 offset_top = 466.0
-offset_right = 650.0
+offset_right = 637.0
 offset_bottom = 522.0
 
 [node name="Attack" type="Button" parent="ActionContainer"]

@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://1t01p501fumr"]
+
+[ext_resource type="Script" path="res://scripts/Events/Event.gd" id="1_bakv2"]
+[ext_resource type="Texture2D" uid="uid://dsroga43q2v4b" path="res://Sprites/HUD/frames/frameempty.png" id="2_6c4s0"]
+
+[node name="Event" type="Node"]
+script = ExtResource("1_bakv2")
+frame = ExtResource("2_6c4s0")
+prerequisite = 6
+intro_text = "You feel your head pound. 
+
+Strange sensations string together in your mind, like the fleeting remnants of a long forgotten memory."
+resolution_one_button_text = "Try to remember."
+resolution_two_button_text = "Snap out of it."
+resolution_one_text = "You remember something. You remember being here before, you remember what comes next. 
+
+You wonder if it will ever end."
+resolution_one_end_text = "...
+[+1 END]"
+resolution_one_resolve_consequences = Array[String](["end + 1"])
+resolution_two_text = "The sensation fades like the snuffing of the last embers on a campfire.
+
+It's time to move on."
+resolution_two_end_text = "...
+[+1 STR]"
+resolution_two_resolve_consequences = Array[String](["str + 1"])

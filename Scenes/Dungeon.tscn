@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://dqcao1arx4bwe"]
+[gd_scene load_steps=20 format=3 uid="uid://dqcao1arx4bwe"]
 
 [ext_resource type="Theme" uid="uid://dvt7s00aejcpi" path="res://Resources/HUD/maintheme.tres" id="1_rfobi"]
 [ext_resource type="Script" path="res://Scenes/Dungeon.gd" id="2_s1krc"]
@@ -18,13 +18,14 @@
 [ext_resource type="PackedScene" uid="uid://dj3udsubib7j2" path="res://Scenes/Events/EventCorpseHP.tscn" id="13_tw7j3"]
 [ext_resource type="PackedScene" uid="uid://b3vcpu7msi8xf" path="res://Scenes/Events/EventMaggot.tscn" id="14_530xw"]
 [ext_resource type="PackedScene" uid="uid://p037m0bkb2b1" path="res://Scenes/Events/Event1Scroll.tscn" id="14_w8nss"]
+[ext_resource type="PackedScene" uid="uid://1t01p501fumr" path="res://Scenes/Events/EventMemory.tscn" id="15_som1i"]
 
 [node name="DungeonHUD" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 theme = ExtResource("1_rfobi")
 script = ExtResource("2_s1krc")
-events_preload = Array[PackedScene]([ExtResource("3_gwgk7"), ExtResource("4_4qmcb"), ExtResource("5_ihoqo"), ExtResource("6_mj26a"), ExtResource("7_q7j3o"), ExtResource("8_koyy0"), ExtResource("12_r2v22"), ExtResource("9_ad5hq"), ExtResource("10_5c3ym"), ExtResource("13_tw7j3"), ExtResource("14_530xw"), ExtResource("14_w8nss"), ExtResource("11_1waws")])
+events_preload = Array[PackedScene]([ExtResource("3_gwgk7"), ExtResource("4_4qmcb"), ExtResource("5_ihoqo"), ExtResource("6_mj26a"), ExtResource("7_q7j3o"), ExtResource("8_koyy0"), ExtResource("12_r2v22"), ExtResource("9_ad5hq"), ExtResource("10_5c3ym"), ExtResource("13_tw7j3"), ExtResource("14_530xw"), ExtResource("14_w8nss"), ExtResource("15_som1i"), ExtResource("11_1waws")])
 
 [node name="MainBox" type="TextureRect" parent="."]
 layout_mode = 0

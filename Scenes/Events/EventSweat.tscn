@@ -16,8 +16,8 @@ resolution_one_text = "As you step into the liquid, you feel it eat away at your
 
 As it washes off, however, it seems to leave your skin harder than it was before."
 resolution_one_end_text = "How peculiar...
-[-2 HP, +3 MAX HP]"
-resolution_one_resolve_consequences = Array[String](["hp - 2", "max_hp + 3"])
+[-2 HP, +5 MAX HP]"
+resolution_one_resolve_consequences = Array[String](["hp - 2", "max_hp + 5"])
 resolution_two_text = "Eventually, you find a safer passage.
 
 However, the wasted time seems to have taken it's toll on your body."

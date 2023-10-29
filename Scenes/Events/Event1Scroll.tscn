@@ -19,5 +19,5 @@ You are soon awoken by the sound of scratching, seeming to come from all around 
 
 You decide it is best to leave."
 resolution_two_end_text = "You needed that nap.
-[+1 MAX STAM]"
-resolution_two_resolve_consequences = Array[String](["max_stam + 1"])
+[+1 MAX HP/STAM]"
+resolution_two_resolve_consequences = Array[String](["max_stam + 1", "max_hp + 1"])

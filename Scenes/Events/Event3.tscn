@@ -11,8 +11,8 @@ resolution_one_button_text = "Steel yourself."
 resolution_two_button_text = "Rest for a moment."
 resolution_one_text = "You remind yourself to be prepared for whatever is ahead."
 resolution_one_end_text = "OK.
-[+2 MAX HP]"
-resolution_one_resolve_consequences = Array[String](["max_hp + 2"])
+[+3 MAX HP]"
+resolution_one_resolve_consequences = Array[String](["max_hp + 3"])
 resolution_two_text = "You sit down for a while. You never knew it was possible to be so exhausted within a dream."
 resolution_two_end_text = "You feel ready.
 [+1 MAX STAM]"
